@@ -84,7 +84,28 @@ def main(args):
         "data/test"
     )
 
-    cfg = setup(args)
+	register_coco_instances(
+        "doclaynet_train",
+        {},
+        "./doclaynet_data/COCO/train.json",
+        "./doclaynet_data/PNG",
+    )
+
+    register_coco_instances(
+        "doclaynet_val",
+        {},
+        "./doclaynet_data/COCO/val.json",
+        "./doclaynet_data/PNG",
+    )
+
+    register_coco_instances(
+        "doclaynet_test",
+        {},
+        "./doclaynet_data/COCO/test.json",
+        "./doclaynet_data/PNG"
+    )
+
+    cfg e setup(args)
 
     if args.eval_only:
         model = MyTrainer.build_model(cfg)
