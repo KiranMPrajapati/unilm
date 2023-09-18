@@ -391,7 +391,6 @@ class MyTrainer(TrainerBase):
         self._trainer = (AMPTrainer if cfg.SOLVER.AMP.ENABLED else SimpleTrainer)(
             model, data_loader, optimizer
         )
-
         self.scheduler = self.build_lr_scheduler(cfg, optimizer)
         self.checkpointer = MyDetectionCheckpointer(
             # Assume you want to save checkpoints together with logs/statistics

@@ -1,0 +1,1 @@
+python ./dit/object_detection/inference.py --image_path ./dit/object_detection/fidelity_dataset/Deed/FL-Polk/FLPOLK-12744-00996.TIF --output_file_name ./output/FLPOLK-12744-00996.jpg --config ./dit/object_detection/publaynet_configs/cascade/cascade_dit_base.yaml --opts MODEL.WEIGHTS ./dit/object_detection/output/model_0017999.pth

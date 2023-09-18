@@ -61,6 +61,8 @@ def main():
     md = MetadataCatalog.get(cfg.DATASETS.TEST[0])
     if cfg.DATASETS.TEST[0]=='icdar2019_test':
         md.set(thing_classes=["table"])
+    elif cfg.DATASETS.TEST[0]=='doclaynet_val':
+        md.set(thing_classes=["caption", "footnote", "formula", "list-item", "page-footer", "page-header", "picture", "section-header", "table", "text", "title"])
     else:
         md.set(thing_classes=["text","title","list","table","figure"])
 
